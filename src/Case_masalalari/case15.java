@@ -4,125 +4,39 @@ import java.util.Scanner;
 
 public class case15 {
     public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("G'ish");
-        System.out.println("Olma");
-        System.out.println("Chillik");
-        System.out.println("Qarg'a");
-        System.out.print("Karta turi (M) >>>");
-        int n=sc.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Karta qiymati (N)= ");
-        int m=sc.nextInt();
+        System.out.println("1 - G‘ish");
+        System.out.println("2 - Olma");
+        System.out.println("3 - Chillik");
+        System.out.println("4 - Qarg‘a");
+        System.out.print("Karta turi (1–4) >>> ");
+        int n = sc.nextInt();
 
-        String b="g'ish";
-        String d="olma";
-        String e="chillik";
-        String g="qarg'a";
+        System.out.print("Karta qiymati (6–14) >>> ");
+        int m = sc.nextInt();
 
-        switch (n){
-            case 1:
-                if(m==6) {
-                    System.out.println(m+" "+b);
-                }
-                else if(m==7) System.out.println(m+" "+b);
-                else if(m==8) System.out.println(m+" "+b);
-                else if(m==9) System.out.println(m+" "+b);
-                else if(m==10) System.out.println(m+" "+b);
-                else if(m==11) {
-                    String nom="valet";
-                    System.out.println(nom+" "+b);
-                }
-                else if(m==12) {
-                    String nom="dama";
-                    System.out.println(nom+" "+b);
-                }
-                else if(m==13) {
-                    String nom="qirol";
-                    System.out.println(nom+" "+b);
-                }
-                else if(m==14) {
-                    String nom="tuz";
-                    System.out.println(nom+" "+b);
-                }
-                break;
-            case 2:
-                if(m==6) {
-                    System.out.println(m+" "+d);
-                }
-                else if(m==7) System.out.println(m+" "+d);
-                else if(m==8) System.out.println(m+" "+d);
-                else if(m==9) System.out.println(m+" "+d);
-                else if(m==10) System.out.println(m+" "+d);
-                else if(m==11) {
-                    String nom="valet";
-                    System.out.println(nom+" "+d);
-                }
-                else if(m==12) {
-                    String nom="dama";
-                    System.out.println(nom+" "+d);
-                }
-                else if(m==13) {
-                    String nom="qirol";
-                    System.out.println(nom+" "+d);
-                }
-                else if(m==14) {
-                    String nom="tuz";
-                    System.out.println(nom+" "+d);
-                }
-                break;
-            case 3:
-                if(m==6) {
-                    System.out.println(m+" "+e);
-                }
-                else if(m==7) System.out.println(m+" "+e);
-                else if(m==8) System.out.println(m+" "+e);
-                else if(m==9) System.out.println(m+" "+e);
-                else if(m==10) System.out.println(m+" "+e);
-                else if(m==11) {
-                    String nom="valet";
-                    System.out.println(nom+" "+e);
-                }
-                else if(m==12) {
-                    String nom="dama";
-                    System.out.println(nom+" "+e);
-                }
-                else if(m==13) {
-                    String nom="qirol";
-                    System.out.println(nom+" "+e);
-                }
-                else if(m==14) {
-                    String nom="tuz";
-                    System.out.println(nom+" "+e);
-                }
-                break;
-            case 4:
-                if(m==6) {
-                    System.out.println(m+" "+g);
-                }
-                else if(m==7) System.out.println(m+" "+g);
-                else if(m==8) System.out.println(m+" "+g);
-                else if(m==9) System.out.println(m+" "+g);
-                else if(m==10) System.out.println(m+" "+g);
-                else if(m==11) {
-                    String nom="valet";
-                    System.out.println(nom+" "+g);
-                }
-                else if(m==12) {
-                    String nom="dama";
-                    System.out.println(nom+" "+g);
-                }
-                else if(m==13) {
-                    String nom="qirol";
-                    System.out.println(nom+" "+g);
-                }
-                else if(m==14) {
-                    String nom="tuz";
-                    System.out.println(nom+" "+g);
-                }
-                break;
-            default:
-                System.out.println("Xatoda!!!");
-        }
+        String tur = switch (n) {
+            case 1 -> "g‘ish";
+            case 2 -> "olma";
+            case 3 -> "chillik";
+            case 4 -> "qarg‘a";
+            default -> "noma’lum";
+        };
+
+        String qiymat = switch (m) {
+            case 6 -> "olti";
+            case 7 -> "yetti";
+            case 8 -> "sakkiz";
+            case 9 -> "to‘qqiz";
+            case 10 -> "o‘n";
+            case 11 -> "valet";
+            case 12 -> "dama";
+            case 13 -> "qirol";
+            case 14 -> "tuz";
+            default -> "noma’lum";
+        };
+
+        System.out.println(qiymat + " " + tur);
     }
 }
