@@ -10,10 +10,9 @@ public class for10 {
         int n=sc.nextInt();
         double a=0;
         for (int i=1;i<=n;i++){
-            a=(double) (1/i)+a;
+            a=a+(1.0/i);
         }
         System.out.println("Yig'indi = "+a);
-        double e=10/3f;
-        System.out.println(e);
+
     }
 }
